@@ -58,11 +58,17 @@ press = press +1;
         });
         CheckBox checkBox1 = new CheckBox("yes or no");
 
-        RadioButton radioButton1 = new RadioButton("Up or no");
 
         ColorPicker colorPicker = new ColorPicker();
 
         Color value = colorPicker.getValue();
+        colorPicker.setOnAction ((event) -> {
+            RadioButton radioButton1 = new RadioButton(value+"collro");
+
+        });
+        RadioButton radioButton1 = new RadioButton(value+"collro");
+
+
 //hboc stuff
         HBox hboxFin = new HBox(checkBox1,radioButton1,colorPicker);
 
